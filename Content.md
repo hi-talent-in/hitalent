@@ -1,19 +1,18 @@
 **About us**
 
-Hi Talent is an online programming training platform that is on a mission to help students and working professionals brush up their skills free of cost. 
-We deliver our training through an internship of 3-6 months(for talent with computer science background) and apprenticeship of 6-9 months(for talent who do not have computer science backgroud), which equips the talents with basic programming skills, the end goal is that after the internship or apprenticeship the talent will be able to get the job as sotware developer. 
-With us, the talents have a chance to try their hands on live projects. We are sure that our internship program helps the talents to update their programming skills according to current industry standards. 
+Hi Talent is an online programming training platform that is on a mission to help students learn programming free of cost. 
+We deliver our training through internship of 3-6 months duration and apprenticeship of 6-9 months duration, which equips the talents with necessary programming skills. Our end goal is that after the internship or apprenticeship, the talent will be able to get a job as sotware developer. 
+With us, the talents have a chance to try their hands on live projects, which give them actual industry exposure. We are sure that our training programs helps the talents to update their programming skills according to current industry standards. 
 We are delivering training in Java, Python, Javascript, SQL, Docker, Algorithms, .NET, Agile, DevOps, and basic data structure.
 
 
 **Programs**
 
-**Freshers Program**
+**Internship Program**
 
-This is for candidates who do not have any prior experience in programming. For 45 days, the candidates are trained based on our training module which equips them with basic programming skills. For the remaining days, they are trained on live projects for which they are provided with a stipend.
+This program is for candidates who are from the computer science discipline. The entire duration of the program is 3 to 6 months in which they are trained on our carriculum and on live projects for which they are provided with a stipend. Our industry oriented carriculum helps them to brush up their basic programming skills and working on live projrcts gives them necessary industry exposure.
 
 
+**Apprenticeship Program**
 
-**Upskilling Program**
-
-This is for working professionals(who wants to be software developer) who need to upgrade their skills according to current industry standards. They are trained on live projects for which they are provided with a stipend. 
+This program is for people who are not from computer science discipline. People who wish to switch to this field or have a desire to learn computer programming can apply for this program. The entire duration of the program is 6 to 9 months in which they are trained on basic as well as advanced concepts in programming and also have the chance to work on live projects for which they are provided with a stipend. 
