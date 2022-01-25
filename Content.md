@@ -8,7 +8,7 @@ We are delivering training in Java, Python, Javascript, SQL, Docker, Algorithms,
 
 **Programs**
 
-**Freshers Program**
+**Internship program**
 
 This is for candidates who do not have any prior experience in programming. For 45 days, the candidates are trained based on our training module which equips them with basic programming skills. For the remaining days, they are trained on live projects for which they are provided with a stipend.
 
