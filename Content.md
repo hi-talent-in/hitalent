@@ -13,6 +13,6 @@ We are delivering training in Java, Python, Javascript, DotNet, SQL, Docker, Dev
 This program is for candidates who are from the computer science discipline. The entire duration of the program is 3 to 6 months in which they are trained on our carriculum and on live projects for which they are provided with a stipend. Our industry oriented carriculum helps them to brush up their basic programming skills and working on live projects gives them necessary industry exposure.
 
 
-**Apprenticeship Program(6-9 Months)**
+**Apprenticeship Program (6-9 Months)**
 
 This program is for people who are not from computer science discipline. People who wish to switch to this field or have a desire to learn computer programming can apply for this program. The entire duration of the program is 6 to 9 months in which they are trained on basic as well as advanced concepts in programming and also have the chance to work on live projects for which they are provided with a stipend. 
