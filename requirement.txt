@@ -1,0 +1,21 @@
+Requirement for run angular project :
+1) install node js : https://nodejs.org/en/download/
+
+2) go to powershell: 
+check node version:
+cmd: node --version
+check npm version:
+cmd: npm --version
+
+3) install angular CLI:
+cmd: npm install -g @angular/cli
+
+4) for create angular project use :
+cmd: ng new my-first-project
+     cd my-first-project
+
+5) for build app:
+cmd:ng build my-app -c production
+
+5) for run project use:
+  cmd:ng serve
