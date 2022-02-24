@@ -5,7 +5,8 @@ services: # Here we define our service(s)
       build: ./UI/WebMain # Location of our Dockerfile
       volumes: # Volume binding
         - './UI/WebMain:/usr/src/app' 
-      ports: 
-        - '4200:4200' # Port mapping
-      command: > 
-        bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+      ports:
+        - '80:80' # Port mapping
+      command: >
+
+        bash -c "npm install && ng serve --host 0.0.0.0 --port 80 --disable-host-check"
