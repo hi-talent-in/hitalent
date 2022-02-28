@@ -15,7 +15,7 @@ local development should use docker and docker compose
 5. #### Run docker compose with angular service 
    docker-compose logs angular-service OR sudo docker-compose logs angular-service
 6. #### click on link <br /> 
-   http://localhost:4200/
+   http://localhost:80/ (on local system) or externel ip address of vm (vm instance console)
 7. #### see running container <br /> 
    docker ps OR sudo docker ps
 8. #### kill running container <br /> 
