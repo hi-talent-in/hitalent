@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     
     'rest_framework',
+    'djangular', 
     #'frontend',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-    'djangular'
+    'bootstrap4',
+    
     
 ]
 
@@ -64,7 +66,7 @@ ROOT_URLCONF = 'djangular.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),os.path.join(BASE_DIR,'templates','accounts')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,7 +134,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-SITE_ID = 2
+SITE_ID = 3
 STATIC_URL = '/static/'
 
 # Add these new lines
