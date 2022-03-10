@@ -20,5 +20,6 @@ urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('accounts/',include('allauth.urls')),
-    path('', frontend_views.home),
+    path('', frontend_views.home,name='home'),
+    path('',include('journey.urls')),
 ]

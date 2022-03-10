@@ -41,12 +41,13 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'djangular', 
-    #'frontend',
+    
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'bootstrap4',
+    'journey',
     
     
 ]
@@ -134,7 +135,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-SITE_ID = 3
+SITE_ID = 4
 STATIC_URL = '/static/'
 
 # Add these new lines
@@ -143,7 +144,7 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/dashboard/'
 SOCIALACCOUNT_PROVIDERS = {
     'google':{
         'SCOPE':[
@@ -159,3 +160,8 @@ SOCIALACCOUNT_PROVIDERS = {
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# ACCOUNT_FORMS = {
+#  'signup': 'journey.forms.CustomSignupForm',
+# }
+#to add allauth user to group
+#ACCOUNT_ADAPTER = 'journey.customadapters.UserAccountAdapter'
