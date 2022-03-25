@@ -1,0 +1,7 @@
+django
+django-allauth
+whitenoise
+gunicorn
+django-cors-headers
+djangorestframework
+Pillow

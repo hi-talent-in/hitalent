@@ -1,12 +1,8 @@
-version: '3.5' # We use version 3.5 syntax
-services: # Here we define our service(s)
-    angular-service: # The name of the service
-      container_name: hitalentangularcontainer  # Container name
-      build: ./UI/WebMain # Location of our Dockerfile
-      volumes: # Volume binding
-        - './UI/WebMain:/usr/src/app' 
-      ports:
-        - '80:80' # Port mapping
-      command: >
+version: '3.8'
+services:
+   web:
+       build: ./Hitalent
 
-        bash -c "npm install && ng serve --host 0.0.0.0 --port 80 --disable-host-check"
+       command: python manage.py runserver 0.0.0.0:8000
+       ports:
+           - 8000:8000

@@ -1,0 +1,41 @@
+{% block content %}
+<main class="profile-page layout layout--3">
+  <div class="container">
+    <div class="profile-list">
+      <div class="profile">
+        <div class="profile__avatar">
+          <div class="avatar avatar--large active">
+            <img src="{{request.user.avatar.url}}" />
+          </div>
+        </div>
+        <div class="profile__info">
+          <h3>{{user.username}}</h3>
+          <p>@{{user.username}}</p>
+          {% if request.user == user %}
+          <a href="{% url 'update-user' %}" class="btn btn--main btn--pill"
+            >Edit Profile</a
+          >
+          {% endif %}
+        </div>
+        <div class="user-avatar">
+            <img src="{{user.profile.avatar}}" alt="{{user}} Avatar">
+        </div>
+        <div class="about">
+            <p> 
+                {{user.profile.bio}}</p>
+        </div>
+        
+
+        <div class="user_details">USER DETAILS
+            <p>FIRST NAME : {{user.profile.first_name}}</p>
+            <p>LAST NAME :{{user.profile.last_name}}</p>
+            <p>GENDER : {{user.profile.gender}}</p>
+            <p>EDUCATION : {{user.profile.educational_details}}</p>
+            <p>GIT PROFILE : {{user.profile.git_profile}}</p>
+            <p>PHONE NUMBER : {{user.profile.phone}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock content %}
