@@ -1,8 +1,11 @@
 
 from django.urls import path, include
 from . import views
+from django.contrib import admin
 
 urlpatterns = [
+    path('admin/', admin.site.urls,name='admin'),
+
     path('',views.homePage,name='home'),
     path('accounts/',include('allauth.urls')),
     path('dashboard/',views.dashbo,name='dashboard'),
@@ -14,3 +17,4 @@ urlpatterns = [
 
 
 ]
+
