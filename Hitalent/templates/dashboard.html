@@ -2,12 +2,13 @@
 <!-- Coding By EHARAM -->
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- <link rel="stylesheet" href="style.css"> -->
-
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
@@ -326,111 +327,7 @@
     }
   </style>
   <body>
-    <nav class="sidebar close">
-      <header>
-        <div class="image-text">
-          <span class="image">
-            <img src="logo.png" alt="" />
-          </span>
-
-          <div class="text logo-text">
-            <span class="name">Hitalent </span>
-            <span class="profession"></span>
-          </div>
-        </div>
-
-        <i class="bx bx-chevron-right toggle"></i>
-      </header>
-
-      <div class="menu-bar">
-        <div class="menu">
-          <!-- <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li> -->
-
-          <ul class="menu-links">
-            <li class="nav-link">
-              <a href="#">
-                <i class="bx bx-home-alt icon"></i>
-                <span class="text nav-text">Dashboard</span>
-              </a>
-            </li>
-
-            <!-- <li class="nav-link">
-              <a href="{% url 'account_login' %}">
-                <i class="bx bx-log-in icon"></i>
-                <span class="text nav-text">Sign Up</span>
-              </a>
-            </li> -->
-
-            <li class="nav-link">
-              <a href="https://github.com/hi-talent-org/journey">
-                <i class="bx bx-laptop icon"></i>
-                <span class="text nav-text">Journey</span>
-              </a>
-            </li>
-
-            <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-computer icon'></i>
-                            <span class="text nav-text">Choose Language</span>
-                        </a>
-                    </li>
-
-            <li class="nav-link">
-              <a href="https://hitalentt.slack.com/?redir=%2Fgantry%2Fclient">
-                <i class="bx bx-slack icon"></i>
-                <!-- <box-icon type="logo" name="slack" icon></box-icon> -->
-                <span class="text nav-text">Slack</span>
-              </a>
-            </li>
-
-            <li class="nav-link">
-              <a href="https://github.com/hi-talent-org/helloworld">
-                <i class="bx bx-github-square icon"></i>
-                <span class="text nav-text">GITHUB</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              {% if request.user.is_authenticated %}
-              <a href="{% url 'users-profile' user.id %}">
-                <i class="bx bx-github-square icon"></i>
-                <span class="text nav-text">Profile</span>
-              </a>
-              {% else %}
-              <a href="account_login">
-                <i class="bx bx-github-square icon"></i>
-                <span class="text nav-text">Profile</span>
-              </a>
-              {% endif %}
-            </li>
-          </ul>
-        </div>
-
-        <div class="bottom-content">
-          <li class="">
-            <a href="{% url 'account_logout' %}">
-              <i class="bx bx-log-out icon"></i>
-              <span class="text nav-text">Logout</span>
-            </a>
-          </li>
-
-          <!-- <li class="mode">
-            <div class="sun-moon">
-              <i class="bx bx-moon icon moon"></i>
-              <i class="bx bx-sun icon sun"></i>
-            </div>
-            <span class="mode-text text">Dark mode</span>
-
-            <div class="toggle-switch">
-              <span class="switch"></span>
-            </div>
-          </li> -->
-        </div>
-      </div>
-    </nav>
-
+    {% include 'header.html' %}
     <section class="home">
       <div class="text">
         <p>
@@ -440,6 +337,9 @@
         Dashboard
       </div>
     </section>
+    {% include 'nav_bar.html' %}
+
+
 
     <script>
       const body = document.querySelector("body"),
