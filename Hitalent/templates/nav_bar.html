@@ -77,7 +77,7 @@
           </li>
           <li class="nav-link">
             {% if request.user.is_authenticated %}
-            <a href="{% url 'user-profile' user.id %}">
+            <a href="{% url 'update-user' %}">
               <i class="bx bx-github-square icon"></i>
               <span class="text nav-text">Profile</span>
             </a>
