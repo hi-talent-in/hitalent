@@ -58,7 +58,7 @@
         <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">{{user.profile.first_name}}
         </a>
         <div class="dropdown-menu">
-            <a href="{% url 'user-profile' user.id %}" class="dropdown-item">Profile</a>
+            <a href="{% url 'update-user'  %}" class="dropdown-item">Profile</a>
             <a href="{% url 'account_login' %}" class="dropdown-item">Logout</a>
         </div>
       </div>

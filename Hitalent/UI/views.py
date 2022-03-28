@@ -29,7 +29,7 @@ def update(request):
             profile_form.save()
             messages.success(request, 'PROFILE UPDATED SUCCESSFULLY')
             user = request.user
-            return redirect('user-profile', pk=user.id)
+            return redirect('home')
     else:
         profile_form = UpdateProfileForm(instance=request.user.profile)
     context = {'profile_form': profile_form}
