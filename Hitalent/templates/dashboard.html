@@ -1,5 +1,5 @@
+{% include 'header.html' %}
 <!DOCTYPE html>
-
   <!-- Coding By EHARAM -->
 <html lang="en">
 <head>
@@ -10,231 +10,18 @@
     
     <!--<title>Dashboard Sidebar Menu</title>--> 
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        /* Google Font Import - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-:root{
-    /* ===== Colors ===== */
-    --body-color: #E4E9F7;
-    --sidebar-color: #FFF;
-    --primary-color: #695CFE;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #070707;
-
-    /* ====== Transition ====== */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
-}
-
-body{
-    min-height: 100vh;
-    background-color: var(--body-color);
-    transition: var(--tran-05);
-}
-
-::selection{
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-body.dark{
-    --body-color: #18191a;
-    --sidebar-color: #242526;
-    --primary-color: #3a3b3c;
-    --primary-color-light: #3a3b3c;
-    --toggle-color: #fff;
-    --text-color: #ccc;
-}
-.home{
-    position: absolute;
-    top: 0;
-    top: 0;
-    left: 250px;
-    height: 100vh;
-    width: calc(100% - 250px);
-    background-color: var(--body-color);
-    transition: var(--tran-05);
-}
-/* .home .text{ */
-    /* font-size: 40px;
-    font-weight: 500;
-    color: var(--text-color);
-    padding: 12px 60px;
-    margin-right:
-    margin-left: 27%; */
-    /* font-style: italic;
-    font-family: Arial, Helvetica, sans-serif;
-    border:  solid; */
-/* } */
-
-/* .sidebar.close ~ .home{
-    left: 78px;
-    height: 100vh;
-    width: calc(100% - 78px);
-}
-body.dark .text{
-    color: var(--text-color);
-} */
-.code div a:hover  {
-    border-radius: 6px;
-    background-color: #523fbe;
-    color: #fcfffb;
-    font-size: 25px;
-    text-align: center;
-    justify-content: center;
-}
-.code{
-   font-size: 28px;
-   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   text-align: center;
-   margin-right: 27%;
-   margin-top: 5%;
-   text-decoration-line: none;
-   
-   /* text-decoration: none; */
-}
-.bottom-content{
-   margin-top: 190%;
-}
-  h1{
-    font-size: 50px; 
-    color: var(--text-color); 
-    margin-left: 25%; 
-     /* margin-top: ;  */
-     margin-bottom: 10%;
-
-    border-radius: 6px;
-    background-color: #dad7e9;
-    height: 68px;
-    width: 26%; 
- } 
-.nav1 a{
- 
-  border-radius: 6px;
-  background-color: #c9cbcc;
-  padding-right: 350px;
-  padding-bottom: 2px;
-  width: 200px;
-  text-align: center;
-  text-decoration: none;
-}
-  .nav5 a{
-   
-    background-color: #c9cbcc;
-    border-radius: 6px;
-    padding-right: 212px;
-    width: 200px;
-    text-align: center;
-    text-decoration: none;
-  }
-  .nav4 a{
-   
-    background-color: #c9cbcc;
-    border-radius: 6px;
-    padding-right: 372px;
-    width: 200px;
-    text-align: center;
-    text-decoration: none;
-  }
-  .nav3 a{
-    
-    background-color: #c9cbcc;
-    border-radius: 6px;
-    padding-right: 395px;
-    width: 200px;
-    text-align: center;
-    text-decoration: none;
-  }
-  .nav2 a{
-   
-    background-color: #c9cbcc;
-    border-radius: 6px;
-    padding-right: 386px;
-    width: 200px;
-    text-align: center;
-    text-decoration: none;
-  }
-  div{
-      margin-bottom: 15px;
-  }
-  .dropbtn {
-    background-color: #c4c1c1;
-    color: #281974;
-    border-radius: 6px;
-    padding-right: 234px;
-    padding-top: 0px;
-    padding-bottom: 1px;
-    font-size: 26px;
-    border: none;
-    cursor: pointer;
-  }
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
   
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #cfcfcf;
-    min-width: 390px;
-    /* box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.2); */
-    /* z-index: 1; */
-    font-size: 22px;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    /* padding: 12px ; */
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* .dropdown-content a:hover {background-color: #4c40b4} */
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #523fbe;
-  }
-  .pro{
-      margin-left: 24%;
-      margin-top: 3%;
-      /* margin-bottom:; */
-  }
-  .new a{
-   
-    background-color: #88c4e2;
-    border-radius: 6px;
-    padding: 80px;
-    padding-right: 1px;
-font-size: 30px;
-    margin-left: 16%;
-
-    width: 200px;
-    /* text-align: center; */
-    text-decoration: none;
-  }
-
-    </style>
 </head>
 <body>
 
     <section class="home">
-        <!-- <h1>Dashboard</h1> -->
+        <!-- <h1>Dashboard</h1>
       <div class="new">
             <a href="#">
                 <span class="nav1">Hitalent Journey Progress
@@ -245,54 +32,233 @@ font-size: 30px;
             <progress value="65" max="100"></progress>
             <span>65&#37</span>
         </div>
-        
+         -->
         <div class="code">
             
-        <div class="nav1">
+        <!-- <div class="nav1">
             <a href="#">
                 <span class="nav1">Journey</span>
             </a>
-        </div>
+        </div> -->
 
     
 
-        <div class="dropdown">
-            <button class="dropbtn">Choose language
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="#">Java Script</a>
-            <a href="#">Python</a>
-            <a href="#">Java</a>
-            <a href="#">.Net</a>
-            <a href="#">MySQL</a>
-            <a href="#">React</a>
-            </div>
-          </div>
+       
           
         <div class="nav4">
-            <a href="#">
+            <a href="https://github.com/hi-talent-org/journey">
                 
                 <span class="nav5">Github
                 </span>
             </a>
         </div>
         <div class="nav3">
-            <a href="#">
+            <a href="https://slack.com/signin#/signin">
                 
                 <span class="nav5">Slack
                 </span>
             </a>
         </div>
-        <div class="nav2">
-            <a href="#">
-                
-                <span class="nav5">Profile
-                </span>
-            </a>
-        </div>
+        <select class="dropdown">
+          <!-- <button class="dropbtn">Choose language
+              <i class="fa fa-caret-down"></i>
+          </button> -->
+          <div class="dropdown-content">
+            <option value="Java Script"> <a href="#">Choose language :</a> </option>
+
+            <option value="Java Script"> <a href="https://www.w3schools.com/js/">Java Script</a> </option>
+            <option value="Python"> <a href="#">Python</a> </option>
+
+            <option value="Java"> <a href="#">Java</a> </option>
+
+            <option value=".Net"> <a href="#">.Net</a> </option>
+
+            <option value="MySQL"> <a href="#"> MySQL</a> </option>
+
+            <option value="React"> <a href="#">React</a> </option>
+
+          </div>
+        </select>
         </div>
     </section>
 
 </body>
+<style>
+    /* Google Font Import - Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+body{
+  min-height: 100vh;
+  background-color: #342238;
+  transition: var(--tran-05);
+}
+/*         
+::selection{
+  background-color: var(--primary-color);
+  color: #fff;
+} */
+
+body.dark{
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color: #3a3b3c;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+}
+.home{
+  position: absolute;
+  top: 0;
+  top: 0;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+/* .home .text{ */
+  /* font-size: 40px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 12px 60px;
+  margin-right:
+  margin-left: 27%; */
+  /* font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+  border:  solid; */
+/* } */
+
+/* .sidebar.close ~ .home{
+  left: 78px;
+  height: 100vh;
+  width: calc(100% - 78px);
+}
+body.dark .text{
+  color: var(--text-color);
+} */
+.code div a:hover  {
+  border-radius: 6px;
+  background-color: #523fbe;
+  color: #fcfffb;
+  font-size: 25px;
+  text-align: center;
+  justify-content: center;
+}
+.code{
+ font-size: 35px;
+ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ text-align: center;
+ margin-right: 27%;
+ margin-top: 5%;
+ text-decoration-line: none;
+ 
+ /* text-decoration: none; */
+}
+.bottom-content{
+ margin-top: 190%;
+}
+/* h1{
+  font-size: 50px; 
+  color: var(--text-color); 
+  margin-left: 25%; 
+   margin-top: ; 
+   margin-bottom: 10%;
+
+  border-radius: 6px;
+  background-color: #dad7e9;
+  height: 68px;
+  width: 26%; 
+}  */
+/* .nav5 a{
+ 
+  background-color: #c9cbcc;
+  border-radius: 6px;
+  padding-right: 212px;
+  padding: 100px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+} */
+.nav4 a{
+ border: solid rgb(248, 248, 246);
+  background-color: #c9cbcc;
+  border-radius: 6px;
+  padding: 100px;
+  padding-right: 180px;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+}
+.nav3 a{
+  border: solid rgb(252, 252, 252);
+  background-color: #c9cbcc;
+  border-radius: 6px;
+  padding: 108px;
+  padding-right: 190px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+}
+div{
+   margin-top: 230px;
+}
+/* .dropbtn {
+  background-color: #c4c1c1;
+  color: #281974;
+  border-radius: 6px;
+  padding-right: 234px;
+  padding: 45px;
+  padding-top: 20px;
+  padding-bottom: 1px;
+  font-size: 26px;
+  border: none;
+  cursor: pointer;
+} */
+.dropdown{
+    padding: 20px;
+    padding-bottom:95px;
+    padding-top: 90px;
+    margin-top: 130px;
+    padding-right: 75px;
+    background-color: #c9cbcc;
+    border: solid rgb(255, 255, 255);
+    border-radius: 7px;
+    font-size: 29px;
+    color: #201077;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.dropdown:hover{
+    background-color: #523fbe;
+    color: #fcfffb;
+    font-size: 25px;
+}
+
+.pro{
+    margin-left: 24%;
+    margin-top: 3%;
+    /* margin-bottom:; */
+}
+.new a{
+ 
+  background-color: #88c4e2;
+  border-radius: 6px;
+  padding: 80px;
+  padding-right: 1px;
+  font-size: 30px;
+  margin-left: 16%;
+
+  width: 200px;
+  /* text-align: center; */
+  text-decoration: none;
+}
+</style>
+
 </html>
