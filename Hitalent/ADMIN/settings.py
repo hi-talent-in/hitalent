@@ -142,7 +142,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ACCOUNT_SIGNUP_REDIRECT_URL='home'
 #after login redirect to dashboard
 LOGIN_REDIRECT_URL = '/dashboard/'
-SITE_ID = 3
+SITE_ID = 4
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [

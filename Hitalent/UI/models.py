@@ -15,14 +15,15 @@ class Profile(models.Model):
         ('M', 'Male'),
         ('F', 'Female'),
     )
-    user = models.OneToOneField(User,on_delete=models.CASCADE,unique=True)
-    
+    user = models.OneToOneField(User,on_delete=models.CASCADE,unique=True,null=True)
+    language = models.CharField(null=True,max_length=200,default="")
+
     avatar = models.ImageField(default='avatar.svg',upload_to='avatars')
-    bio = models.TextField()
-    gender = models.CharField(max_length=1,choices=GENDER_CHOICES)
-    educational_details = models.TextField()
-    git_profile = models.CharField(max_length=200)
-    phone = models.IntegerField(null=True)
+    bio = models.TextField(null=True)
+    gender = models.CharField(max_length=1,choices=GENDER_CHOICES,null=True)
+    educational_details = models.TextField(null=True)
+    git_profile = models.CharField(max_length=200,null=True,unique=True)
+    phone = models.IntegerField(null=True,unique=True)
 
     def __str__(self):
         return self.user.username
