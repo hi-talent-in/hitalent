@@ -16,8 +16,7 @@ class Profile(models.Model):
         ('F', 'Female'),
     )
     user = models.OneToOneField(User,on_delete=models.CASCADE,unique=True)
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
+    
     avatar = models.ImageField(default='avatar.svg',upload_to='avatars')
     bio = models.TextField()
     gender = models.CharField(max_length=1,choices=GENDER_CHOICES)

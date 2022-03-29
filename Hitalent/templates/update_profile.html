@@ -47,12 +47,15 @@
           <div class="form__action">
             <a class="btn btn--dark" href="{% url 'user-profile' user.id %}">Cancel</a>
             <button class="btn btn--main" type="submit">Submit</button>
+            
           </div>
         </form>
       </div>
     </div>
   </div>
 </main>
+
+  
 
 {% endblock content %}
 <style>
@@ -486,7 +489,7 @@
     max-width: 48rem;
     min-height: 40rem;
     position: absolute;
-    top: 65%;
+    top:100%;
     left: 50%;
     transform: translate(-50%, -46%);
     background-color: var(--color-dark);

@@ -383,15 +383,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-family: 'Times New Roman', Times, serif;
 }
-#hero h1 p{
-  margin: 0;
-  font-size: 45px;
-  font-weight: 700;
-  line-height: 64px;
-  color: #fff;
-  text-shadow: 0 0 1px #ffaeae, 0 0 3px #8bffdc;
-  font-family: fantasy;
-}
+
 #hero h1 span {
   color: #ffc451;
 }
