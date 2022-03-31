@@ -15,8 +15,14 @@ class Profile(models.Model):
         ('M', 'Male'),
         ('F', 'Female'),
     )
+    LANGUAGE_CHOICES=(
+        ('JAVA','Java'),
+        ('JAVASCRIPT','Javascript'),
+        ('PYTHON','Python'),
+        ('.NET','.Net'),
+    )
     user = models.OneToOneField(User,on_delete=models.CASCADE,unique=True,null=True)
-    language = models.CharField(null=True,max_length=200,default="")
+    language = models.CharField(null=True,max_length=200,default="",choices=LANGUAGE_CHOICES)
 
     avatar = models.ImageField(default='avatar.svg',upload_to='avatars')
     bio = models.TextField(null=True)

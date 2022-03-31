@@ -12,7 +12,8 @@ urlpatterns = [
     path('dashboard/',views.dashbo,name='dashboard'),
     # path('profile/<str:pk>', views.userProfile, name='user-profile'),
     path('update-user/',views.update,name='update-user'),
-    path('profile/<str:pk>/',views.profile,name='user-profile')
+    path('profile/<str:pk>/',views.profile,name='user-profile'),
+    path('hi/',views.lang,name='hi')
 
 
 

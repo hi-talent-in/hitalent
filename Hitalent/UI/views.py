@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 
 from .models import Profile
-from .forms import UpdateProfileForm
+from .forms import LanguageForm, UpdateProfileForm
 
 
 @login_required
@@ -41,3 +41,16 @@ def profile(request, pk):
     user = get_object_or_404(User, id=pk)
     profile = get_object_or_404(Profile, user=user)
     return render(request, 'profile.html', {'profile': profile, 'user': user})
+
+
+def lang(request):
+    
+    lang_form=LanguageForm()
+    if request.method == 'POST':
+
+        lang_form = LanguageForm(request.POST,instance=request.user.profile)
+    if lang_form.is_valid():
+        lang_form.save()
+        return redirect('home')
+
+    return render(request, "hi.html", {'form': lang_form})

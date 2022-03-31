@@ -1,3 +1,5 @@
+from dataclasses import field
+from pyexpat import model
 from django import forms
 from .models import Profile
 
@@ -16,3 +18,18 @@ class UpdateProfileForm(forms.ModelForm):
         model = Profile
         fields = '__all__'
         exclude = ['user']
+LANGUAGE_CHOICES=(
+        ('JAVA','Java'),
+        ('JAVASCRIPT','Javascript'),
+        ('PYTHON','Python'),
+        ('.NET','.Net'),
+    )
+class LanguageForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields= ['language']
+        #field = forms.ChoiceField(choices=LANGUAGE_CHOICES, widget=forms.Select(attrs={'onchange': 'submit();'}))
+    
+    # class Meta:
+    #     model = Profile
+    #     fields = ['language']
