@@ -22,6 +22,7 @@ class Profile(models.Model):
         ('.NET','.Net'),
     )
     user = models.OneToOneField(User,on_delete=models.CASCADE,unique=True,null=True)
+    # username=models.CharField(null=True,max_length=100)
     language = models.CharField(null=True,max_length=200,default="",choices=LANGUAGE_CHOICES)
 
     avatar = models.ImageField(default='avatar.svg',upload_to='avatars')
@@ -32,7 +33,7 @@ class Profile(models.Model):
     phone = models.IntegerField(null=True,unique=True)
 
     def __str__(self):
-        return self.user.username
+        return str(self.user.username)
 # @receiver(post_save,sender=User)
 # def created_or_update_profile(sender,instance,created,**kwargs):
 #     if created:
