@@ -44,13 +44,11 @@ def profile(request, pk):
 
 
 def lang(request):
-    
     lang_form=LanguageForm()
     if request.method == 'POST':
-
         lang_form = LanguageForm(request.POST,instance=request.user.profile)
     if lang_form.is_valid():
         lang_form.save()
         return redirect('home')
 
-    return render(request, "hi.html", {'form': lang_form})
+    return render(request, "dashboard.html", {'form': lang_form})

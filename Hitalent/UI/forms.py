@@ -27,7 +27,7 @@ LANGUAGE_CHOICES=(
 class LanguageForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields= ['language']
+        fields='__all__'
         #field = forms.ChoiceField(choices=LANGUAGE_CHOICES, widget=forms.Select(attrs={'onchange': 'submit();'}))
     
     # class Meta:
