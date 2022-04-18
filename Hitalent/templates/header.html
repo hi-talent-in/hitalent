@@ -16,7 +16,7 @@
           <!--<li><a class="nav-link scrollto active" href="#hero">Home</a></li>-->
           <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
           <li><a class="nav-link scrollto" href="{% url 'dashboard' %}">Dashboard</a></li>
-          {% if user.is_superuser %}
+          {% if user.is_superuser or user.is_staff %}
           <li><a class="nav-link scrollto" href="{% url 'admin:index' %}">Admin</a></li>
           {% endif %}
   
