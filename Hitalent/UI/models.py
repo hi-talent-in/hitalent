@@ -33,7 +33,7 @@ class Profile(models.Model):
     phone = models.IntegerField(null=True,unique=True)
 
     def __str__(self):
-        return self.user.username
+        return str(self.user.username)
 # @receiver(post_save,sender=User)
 # def created_or_update_profile(sender,instance,created,**kwargs):
 #     if created:
