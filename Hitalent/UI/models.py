@@ -20,7 +20,7 @@ class Profile(models.Model):
         ('F', 'Female'),
     )
     LANGUAGE_CHOICES = (
-        ('CHOOSE','Choose')
+        ('CHOOSE','Choose'),
         ('JAVA', 'Java'),
         ('JAVASCRIPT', 'Javascript'),
         ('PYTHON', 'Python'),
