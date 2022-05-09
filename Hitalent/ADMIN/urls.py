@@ -7,6 +7,7 @@ urlpatterns = [
     path('', include('UI.urls')),
     path('', include('API.urls')),
     
+    
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -19,20 +19,14 @@ class Profile(models.Model):
         ('M', 'Male'),
         ('F', 'Female'),
     )
-<<<<<<< HEAD
+
     LANGUAGE_CHOICES=(
         ('CHOOSE','choose'),
         ('JAVA','Java'),
         ('JAVASCRIPT','Javascript'),
         ('PYTHON','Python'),
         ('.NET','.Net'),
-=======
-    LANGUAGE_CHOICES = (
-        ('JAVA', 'Java'),
-        ('JAVASCRIPT', 'Javascript'),
-        ('PYTHON', 'Python'),
-        ('.NET', '.Net'),
->>>>>>> 0b62f92f2b7b3e64a62faf9c9c372cc97062494c
+   
     )
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, unique=True, null=True)
