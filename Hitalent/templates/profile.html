@@ -21,21 +21,19 @@
             <li>Language Chosen:<p></p><input class="list_entry" type="text" value="{{user.profile.language}}"readonly> </p></li>
             
         </ul>
-        <a class="edit" href="{% url 'update-user' %}">Update Profile</a>
+        <a class="btn-lg btn-info" href="{% url 'update-user' %}">Update Profile</a>
     
     </div>
-    <button type="button" id="feedback-btn" style="transform: rotate(-90deg);transform-origin: 100% 100%;position: fixed;
-      right: 0;top: 50%;z-index: 100;" class="btn btn-info vertical-right-aligned">
-      Feedback <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-
-  </button>
+    
+    
+    
  
 </body>
 <style>
   body {
-    background-color: #b2bdbd;}
+    background-color: #ffff;}
 .profile {
-    padding: 10%;
+    padding: 700px;
 }
 .details {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
