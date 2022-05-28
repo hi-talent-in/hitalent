@@ -25,9 +25,8 @@ class Profile(models.Model):
         ('JAVA','Java'),
         ('JAVASCRIPT','Javascript'),
         ('PYTHON','Python'),
-        ('.NET','.Net'),
-   
-    )
+        ('.NET','.Net'))
+
     user = models.OneToOneField(
         User, on_delete=models.CASCADE, unique=True, null=True)
     # username=models.CharField(null=True,max_length=100)
