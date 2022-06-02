@@ -1,0 +1,7 @@
+UI/WebMain/node_modules
+UI/WebMain/.angular
+parse5
+./Hitalent/env
+env
+_pycache_/
+*.sqlite3
