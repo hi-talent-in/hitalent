@@ -6,6 +6,7 @@ urlpatterns = [
     
     path('', include('UI.urls')),
     path('', include('API.urls')),
+    path('tellme/', include("tellme.urls")),
     
     
 

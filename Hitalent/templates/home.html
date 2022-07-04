@@ -1,6 +1,6 @@
 {% load static %}
 {% include 'header.html' %}
-
+{%  include 'tellme/js_inc.html' %}
 <html lang="en">
 
 <head>
@@ -40,6 +40,9 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'UI/assetss/css/main.css' %}" rel="stylesheet">
+   
+  <!-- feedback form -->
+  <link href="{% static 'tellme/vendor/feedback/feedback.css' %}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: HeroBiz - v2.1.0
@@ -47,11 +50,24 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+ <!--feedback form css-->
+ <style>
+  .vertical-right-aligned {
+  transform: rotate(-90deg);
+  transform-origin: 100% 100%;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 100;
+}
+</style>
 </head>
 
 <body>
 
-  
+  <button type="button" id="feedback-btn" class="btn btn-info vertical-right-aligned">
+    Feedback <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+  </button>
 
   <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">

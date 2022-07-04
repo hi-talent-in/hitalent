@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'API',
     'UI',
     'bootstrap4',
+    'tellme',
     
     
     #for allauth
