@@ -1,8 +1,29 @@
 {% load static %}
 {% include 'header.html' %}
+{%  include 'tellme/js_inc.html' %}
+
+
+<!-- feedback form -->
+<link href="{% static 'tellme/vendor/feedback/feedback.css' %}" rel="stylesheet">
+
+<!--feedback form css-->
+<style>
+  .vertical-right-aligned {
+  transform: rotate(-90deg);
+  transform-origin: 100% 100%;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  z-index: 100;
+}
+</style>
   
 
 <body>
+  <!-- feedback form button -->
+  <button type="button" id="feedback-btn" class="btn btn-info vertical-right-aligned">
+    Feedback <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+  </button>
 
 
   <div class="container">
