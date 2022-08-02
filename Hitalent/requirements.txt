@@ -1,4 +1,6 @@
-django
+django==3.0
 django-allauth
 Pillow
 bootstrap4
+tellme
+django-tellme

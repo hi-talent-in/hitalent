@@ -1,6 +1,12 @@
 {% load static%}
 {% include 'header.html' %}
 {%  include 'tellme/js_inc.html' %}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
   rel="stylesheet"
@@ -21,84 +27,190 @@
   }
   </style>
 
-<body>
-    <!-- button for feedback form -->
-    <button type="button" id="feedback-btn" class="btn btn-info vertical-right-aligned">
-        Feedback <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
-    </button>
-    <div class="profile">
-        <h2 class="details">User Details</h2>
-        <h3 class="bio">Bio:<p>{{user.profile.bio}}</p></h3>
-        <ul class="list">
-            <li>First name: <p><input class="list_entry" type="text" value="{{user.first_name}}"readonly> </p></li>
-            <li>Last name: <p><input class="list_entry" type="text" value="{{user.last_name}}"readonly></p> </li>
-            <li>Gender: <p><input class="list_entry" type="text" value="{{user.profile.gender}}"readonly> </p></li>
-            <li>Education:<p><input class="list_entry" type="text" value="{{user.profile.educational_details}}"readonly> </p></li>
-            <li>GitHub Id:<p></p><input class="list_entry" type="text" value="{{user.profile.git_profile}}"readonly> </p></li>
-            <li>Phone Number:<p></p><input class="list_entry" type="text" value="{{user.profile.phone}}"readonly></p> </li>
-            <li>Language Chosen:<p></p><input class="list_entry" type="text" value="{{user.profile.language}}"readonly> </p></li>
-            
-        </ul>
-        <a class="btn-lg btn-info" href="{% url 'update-user' %}">Update Profile</a>
-    
-    </div>
-    
-    
-    
- 
-</body>
+<!-- button for feedback form -->
+<button type="button" id="feedback-btn" class="btn btn-info vertical-right-aligned">
+    Feedback <span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>
+</button>
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="{{user.avatars}}" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        {{user.first_name}}
+                                    </h5>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="{% url 'update-user' %}" type="submit" class="profile-edit-btn" name="btnAddMore">Edit Profile</a>
+                    </div>
+                </div>
+                
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.first_name}} {{user.last_name}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>GitHub</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.profile.git_profile}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.profile.phone}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Language</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{user.profile.language}}</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Your Bio</label><br/>
+                                        <p>{{user.profile.bio}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+
+
 <style>
-  body {
-    background-color: #ffff;}
-.profile {
-    padding: 700px;
+    
+    body{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    margin-top: 125px;
+    margin-bottom: 125px;
 }
-.details {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bolder;
-    color: rgb(252, 243, 126);
+#home{
+    margin-left: 52%;
 
 }
-.bio {
-    
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 40px;
-    
-
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
 }
-.bio p{
-    
-    font-size: x-large;
-    color: #fff;
+.profile-img{
+    text-align: center;
 }
-.list {
-    top: 50%;
-    color: #fff;
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
     font-weight: 600;
-    
-    font-family: 'Courier New', Courier, monospace;
+    color: #6c757d;
+    cursor: pointer;
 }
-.list_entry{
-    padding-right: 20%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    box-shadow: #fff;
-    border-radius: 6px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
 }
-.list_entry:hover{
-    color: rgb(255, 255, 255);
-    background-color: black;
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
 }
-.edit{
-    background-color: hsl(0, 66%, 92%);
-    padding: 12px;
-    color: black;
-    font-size: 20px;
-    border-radius: 15px;
+.profile-head .nav-tabs{
+    margin-bottom:5%;
 }
-.edit:hover{
-    background-color: rgb(0, 0, 0);
-    color: #fff;
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
 }
 </style>
