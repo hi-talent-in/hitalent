@@ -1,17 +1,26 @@
 import React, { Component } from "react";
-import { Fade, Slide } from "react-reveal";
+import { Fade, Slide } from "react-awesome-reveal";
 
 class Contact extends Component {
   render() {
-    if (!this.props.data) return null;
-
-    const name = this.props.data.name;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
-    const phone = this.props.data.phone;
-    const message = this.props.data.contactmessage;
+    const main = {
+      name: "HiTalent",
+      address: {
+        street: "NTR Nagar",
+        city: "Kurnool",
+        state: "AP",
+        zip: "518003",
+      },
+      contactmessage:
+        "Here is where you should write your message to HiTalent team to have them get in contact with you.",
+    };
+    const name = main.name;
+    const street = main.address.street;
+    const city = main.address.city;
+    const state = main.address.state;
+    const zip = main.address.zip;
+    const phone = main.phone;
+    const message = main.contactmessage;
 
     return (
       <section id="contact">
@@ -116,8 +125,6 @@ class Contact extends Component {
                   <span>{phone}</span>
                 </p>
               </div>
-
-              
             </aside>
           </Slide>
         </div>

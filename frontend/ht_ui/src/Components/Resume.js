@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Slide from "react-reveal";
+import Slide from "react-awesome-reveal";
 
 class Resume extends Component {
   getRandomColor() {

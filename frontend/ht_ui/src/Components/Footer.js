@@ -1,11 +1,23 @@
 import React, { Component } from "react";
-import Fade from "react-reveal";
+import Fade from "react-awesome-reveal";
 
 class Footer extends Component {
   render() {
-    if (!this.props.data) return null;
-
-    const networks = this.props.data.social.map(function (network) {
+    const main = {
+      social: [
+        {
+          name: "linkedin",
+          url: "https://www.linkedin.com/in/mmmiitr/",
+          className: "fa fa-linkedin",
+        },
+        {
+          name: "github",
+          url: "https://github.com/hi-talent-org/hitalent",
+          className: "fa fa-github",
+        },
+      ],
+    };
+    const networks = main.social.map(function (network) {
       return (
         <li key={network.name}>
           <a href={network.url}>
@@ -26,7 +38,7 @@ class Footer extends Component {
                 <li>&copy; Copyright 2023 HiTalent</li>
                 <li>
                   Design by{" "}
-                  <a title="Styleshout" href="#about">
+                  <a title="Styleshout" href="/about">
                     Iliyas
                   </a>
                 </li>

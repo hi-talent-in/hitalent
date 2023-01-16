@@ -1,39 +1,44 @@
-import React, { Component } from "react";
+import React from 'react'
 
-class Testimonials extends Component {
-  render() {
-    if (!this.props.data) return null;
-
-    const testimonials = this.props.data.map(function (
-      testimonials
-    ) {
-      return (
-        <li key={testimonials.user}>
-          <blockquote>
-            <p>{testimonials.text}</p>
-            <cite>{testimonials.user}</cite>
-          </blockquote>
-        </li>
-      );
-    });
+const Testimonials = () => {
+  const testimonials = [
+    {
+      user: "Iliyas(Zelhus Consultants)",
+      text: "I did 3 months internship and then I got placed in a company where I'm working on big time real life projects.",
+    },
+    {
+      user: "Meraa(Google)",
+      text: "At first I didn't has any prior programming knowledge but with apprentice program I have got enough skills to be placed in largest Tech company and for this I will be thankful to madan",
+    },
+  ];
+  // if (!this.props.data) return null;
+  const testimonial = testimonials.map(function (testimonial) {
     return (
-      <section id="testimonials">
-        <div className="text-container">
-          <div className="row">
-            <div className="two columns header-col">
-              <h1>
-                <span>Client Testimonials</span>
-              </h1>
-            </div>
+      <li key={testimonial.user}>
+        <blockquote>
+          <p>{testimonial.text}</p>
+          <cite>{testimonial.user}</cite>
+        </blockquote>
+      </li>
+    );
+  });
+  return (
+    <section id="testimonials">
+      <div className="text-container">
+        <div className="row">
+          <div className="two columns header-col">
+            <h1>
+              <span>Client Testimonials</span>
+            </h1>
+          </div>
 
-            <div className="ten columns flex-container">
-              <ul className="slides">{testimonials}</ul>
-            </div>
+          <div className="ten columns flex-container">
+            <ul className="slides">{testimonial}</ul>
           </div>
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 }
 
-export default Testimonials;
+export default Testimonials
