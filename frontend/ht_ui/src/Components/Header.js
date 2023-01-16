@@ -36,12 +36,12 @@ const Header = (props) => {
               }
             });
         } catch {
-          // router.push("/auth/login");
+          router.push("/");
         }
       } else {
         const login = sessionStorage.getItem("token");
         if (!login) {
-          // router.push("/auth/login");
+          router.push("/auth/login");
         } else {
           // getAllUsers();
         }

@@ -39,7 +39,7 @@ class Contact extends Component {
         </Fade>
 
         <div className="row">
-          <Slide left duration={1000}>
+          {/* <Slide left duration={1000}> */}
             <div className="eight columns">
               <form action="" method="post" id="contactForm" name="contactForm">
                 <fieldset>
@@ -110,9 +110,9 @@ class Contact extends Component {
                 <br />
               </div>
             </div>
-          </Slide>
+          {/* </Slide> */}
 
-          <Slide right duration={1000}>
+          {/* <Slide right duration={1000}> */}
             <aside className="four columns footer-widgets">
               <div className="widget widget_contact">
                 <h4>Address and Phone</h4>
@@ -126,7 +126,7 @@ class Contact extends Component {
                 </p>
               </div>
             </aside>
-          </Slide>
+          {/* </Slide> */}
         </div>
       </section>
     );
