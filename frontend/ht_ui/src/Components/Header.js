@@ -15,33 +15,30 @@ const Header = (props) => {
   var searchParams = new URLSearchParams(location.search);
   useEffect(() => {
     async function googleLogin() {
-      const state = searchParams.get("state");
       const code = searchParams.get("code");
-      if (searchParams.has("state" && "code")) {
+      if (searchParams.has("code")) {
         try {
           await axios
-            .get(
-              `${process.env.REACT_APP_BASE_URL}/cfagent/google/login/redirect/token/`,
-              {
-                params: { state, code },
-              }
+            .post(
+              "http://localhost:8000/intern/google/tokens/",
+              { code: code },
+              { headers: { "Content-Type": "application/json" } }
             )
             .then((res) => {
+              console.log("res", res);
               if (res.status === 200) {
                 sessionStorage?.setItem("token", res?.data?.tokens?.access);
-                sessionStorage.setItem("first", res?.data?.first_name);
-                sessionStorage.setItem("last", res?.data?.last_name);
                 sessionStorage.setItem("refresh", res?.data?.tokens?.refresh);
                 // getAllUsers();
               }
             });
         } catch {
-          router.push("/");
+          router("/");
         }
       } else {
         const login = sessionStorage.getItem("token");
         if (!login) {
-          router.push("/auth/login");
+          router("/");
         } else {
           // getAllUsers();
         }
@@ -126,10 +123,10 @@ const Header = (props) => {
       </header>
       <About />
       <Resume />
-      <Testimonials/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
+      <Testimonials />
+      <Portfolio />
+      <Contact />
+      <Footer />
     </>
   );
 };

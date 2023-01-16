@@ -22,7 +22,6 @@ class GoogleLogin(APIView):
 
     def post(self, request):
         request_data = request.data
-        print(request_data)
         data = {
             "code": request_data["code"],
             "client_id": "917537609153-lpfjkd2e0ca4otak7focgqs1mbv7g2ut.apps.googleusercontent.com",
@@ -36,7 +35,6 @@ class GoogleLogin(APIView):
                 {"message": "Failed to obtain access token from Google."},
                 status=status.HTTP_200_OK,
             )
-        print(response.json())
         access_token = response.json()["access_token"]
         payload = {"access_token": access_token}  # validate the token
         r = requests.get(
