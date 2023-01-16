@@ -54,16 +54,16 @@ const Header = () => {
           <Fade bottom duration={2000}>
             <ul className="social">
               <a
-                href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?redirect_uri=http%3A%2F%2Flocalhost%3A8000&prompt=consent&response_type=code&client_id=917537609153-lpfjkd2e0ca4otak7focgqs1mbv7g2ut.apps.googleusercontent.com&scope=openid%20email%20profile&access_type=offline&flowName=GeneralOAuthFlow"
+                href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?redirect_uri=http%3A%2F%2Flocalhost%3A3000&prompt=consent&response_type=code&client_id=917537609153-lpfjkd2e0ca4otak7focgqs1mbv7g2ut.apps.googleusercontent.com&scope=email&access_type=offline&flowName=GeneralOAuthFlow"
                 className="button btn project-btn"
               >
-                SignIn
+                Intern With Us
               </a>
               <a
-                href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?redirect_uri=http%3A%2F%2Flocalhost%3A8000&prompt=consent&response_type=code&client_id=917537609153-lpfjkd2e0ca4otak7focgqs1mbv7g2ut.apps.googleusercontent.com&scope=openid%20email%20profile&access_type=offline&flowName=GeneralOAuthFlow"
+                href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?redirect_uri=http%3A%2F%2Flocalhost%3A3000&prompt=consent&response_type=code&client_id=917537609153-lpfjkd2e0ca4otak7focgqs1mbv7g2ut.apps.googleusercontent.com&scope=email&access_type=offline&flowName=GeneralOAuthFlow"
                 className="button btn github-btn"
               >
-                SignUp
+                Currently Intern
               </a>
             </ul>
           </Fade>
